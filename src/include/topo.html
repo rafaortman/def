@@ -1,0 +1,30 @@
+<div class="logo"><a href="index.html">Logo</a></div>
+<nav class="menu-wrapper">
+    <a class="menu-bt">menu</a>
+    <ul id="menu-principal" class="menu">
+        <li><a class="sub-menu-bt">Item 1</a>
+            <ul class="sub-menu">
+                <li>
+                    <a href="#um">Sub-item 1</a>
+                </li>
+                <li>
+                    <a href="#dois">Sub-item 2</a>
+                </li>
+                <li>
+                    <a href="#tres">Sub-item 3</a>
+                </li>
+            </ul>
+        </li>
+        <li><a href="interna.html">Item 2</a></li>
+        <li><a href="interna.html">Item 3</a></li>
+        <li><a href="interna.html">Item 4</a></li>
+        <li><a href="interna.html">Item 5</a></li>
+    </ul>
+</nav>
+<script>
+    if (!$('body').hasClass('home')) {
+        $('.sub-menu a').attr('href', function() { 
+            return 'index.html' + $(this).attr('href'); 
+        });
+    }
+</script>
